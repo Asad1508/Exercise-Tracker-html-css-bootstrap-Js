@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .accordion-button::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    content: "";
+    transition: transform .2s ease-in-out;
+
+        }
+        .accordion-button::after {
+  margin-left: 1.1rem;
+}
+
+.cercle-icons {
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 0.95em;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 150ms ease-out;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
+}
+
+.cercle-icons:hover {
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.25);
+  transition: 150ms ease-in;
+}
+
+.edit-icon {
+  background-color: #344eaa;
+}
+
+.delete-icon {
+  background-color: #bf2611;
+}
+
+#content_list_container {
+  padding: 2rem;
+}
+
+    </style>
+</head>
+<body>
+   <header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 border-bottom fixed-top">
+                    <div class="container-fluid">
+                      <a class="navbar-brand fs-2" href="#">Exercise <span class="text-primary">Tracker</span></a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 text-center">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Track Exercise</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Account
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="#">My Profile</a></li>
+                              <li><a class="dropdown-item" href="#">Logout</a></li>
+                          
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+    </div>
+   </header>
+   <section>
+    <div class="container text-center" style="margin-top: 100px;">
+        <div class="row ">
+            <div class="col-md-12">
+                <button class="btn btn-warning">Create Exercise</button>
+               
+            </div>
+            <div class="col-md-12 mt-5 w-50 text-center " style="margin-left: 300px;">
+                <div id="content_list_container">
+                    <h3>Items list</h3>
+                    <div class="accordion accordion-flush" id="content_accordion">
+                  
+                  
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-heading-1">
+                          <div class="accordion-button collapsed d-flex" data-bs-toggle="collapse" data-bs-target="#item_1" aria-expanded="false" aria-controls="#item_1">
+                            <h5 class="content_title fw-bold">Push Ups</h5>
+                            <div class="ms-auto">
+                              <span class="fa fa-pencil-alt cercle-icons edit-icon" data-app-id="1" data-content-id="1" aria-hidden="true"></span>
+                              <span class="far fa-trash-alt cercle-icons delete-icon" data-app-id="1" data-content-id="1" aria-hidden="true"></span>
+                            </div>
+                          </div>
+                        </h2>
+                        <div id="item_1" class="accordion-collapse collapse" aria-labelledby="flush-heading-1" data-bs-parent="#content_accordion">
+                          <div class="accordion-body content_text">
+                            <div class="card text-center">
+                                <div class="card-header">
+                                  Exercise Name
+                                </div>
+                                <div class="card-body">
+                                  <h5 class="card-title">Description</h5>
+                                  <p class="card-text">Activity Type.</p>
+                                  <p>Date</p>
+                                </div>
+                                <div class="card-footer text-muted">
+                                  2 days ago
+                                </div>
+                              </div>
+
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-heading-2">
+                          <div class="accordion-button collapsed d-flex" data-bs-toggle="collapse" data-bs-target="#item_2" aria-expanded="false" aria-controls="#item_2">
+                            <h5 class="content_title fw-bold">Running</h5>
+                            <div class="ms-auto">
+                              <span class="fa fa-pencil-alt cercle-icons edit-icon" data-app-id="1" data-content-id="2" aria-hidden="true"></span>
+                              <span class="far fa-trash-alt cercle-icons delete-icon" data-app-id="1" data-content-id="2" aria-hidden="true"></span>
+                            </div>
+                          </div>
+                        </h2>
+                        <div id="item_2" class="accordion-collapse collapse" aria-labelledby="flush-heading-2" data-bs-parent="#content_accordion">
+                          <div class="accordion-body content_text"><div class="card text-center">
+                            <div class="card-header">
+                              Exercise Name
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Description</h5>
+                              <p class="card-text">Activity Type.</p>
+                              <p>Date</p>
+                            </div>
+                            <div class="card-footer text-muted">
+                              2 days ago
+                            </div>
+                          </div></div>
+                        </div>
+                      </div>
+                  
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-heading-3">
+                          <div class="accordion-button d-flex collapsed" data-bs-toggle="collapse" data-bs-target="#item_3" aria-expanded="false" aria-controls="#item_3">
+                            <h5 class="content_title fw-bold">Jym </h5>
+                            <div class="ms-auto">
+                              <span class="fa fa-pencil-alt cercle-icons edit-icon" data-app-id="1" data-content-id="3" aria-hidden="true"></span>
+                              <span class="far fa-trash-alt cercle-icons delete-icon" data-app-id="1" data-content-id="3" aria-hidden="true"></span>
+                            </div>
+                          </div>
+                        </h2>
+                        <div id="item_3" class="accordion-collapse collapse" aria-labelledby="flush-heading-3" data-bs-parent="#content_accordion" style="">
+                          <div class="accordion-body content_text"><div class="card text-center">
+                            <div class="card-header">
+                              Exercise Name
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Description</h5>
+                              <p class="card-text">Activity Type.</p>
+                              <p>Date</p>
+                            </div>
+                            <div class="card-footer text-muted">
+                              2 days ago
+                            </div>
+                          </div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+
+        </div>
+    </div>
+   </section>
+</body>
+<script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</html>
