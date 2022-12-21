@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>form</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="text/css">
+		.container {
+			margin-top: 8%;
+			width: 40rem;
+			border: ridge 1.5px white;
+			padding: 20px;
+			border-radius: 15px;
+			
+		}
+
+		.bgs {
+			background-image: url("./images/bg3.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			height: 100vh ;
+			filter: blur(5px);
+		
+			animation-name: imgchang !important;
+			animation-delay: 5s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-duration: 5s;
+		}
+
+		@keyframes imgchang {
+			50% {
+				background: url("./images/bg3.png") ;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				height: 100vh !important;
+				filter: blur(5px);
+				overflow-y: hidden !important;
+			}
+
+		
+			100% {
+				background-image: url("./images/bg2.jpg") ;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				height: 100vh !important;
+				filter: blur(5px);
+				overflow-y: hidden !important;
+			}
+
+		}
+
+		.container {
+			z-index: 1000 !important;
+			position: absolute;
+			top: -12%;
+			left: 30%;
+			box-shadow: 9px 1px 63px -25px rgba(255, 255, 255, 0.75);
+			-webkit-box-shadow: 9px 1px 63px -25px rgba(255, 255, 255, 0.75);
+			-moz-box-shadow: 9px 1px 63px -25px rgba(255, 255, 255, 0.75);
+		}
+
+		.form-control {
+			border-radius: 35px;
+			border: 1px solid goldenrod;
+			height: 40px;
+
+			color: white;
+
+		}
+
+		.btn {
+			border-radius: 35px !important;
+		}
+
+		::placeholder {
+			color: white !important;
+		}
+
+		.btn:hover {
+			background: transparent !important;
+			color: white !important;
+			border: 1px solid #e3b04b !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="bgs"></div>
+	<div class="container">
+		<h2 class="text-center text-white">Registration</h2>
+		<form action="bootstrapform.php" method="post">
+			<div class="form-group">
+				<label for="firstname" class="text-white">First Name</label>
+				<input type="text" class="form-control" id="exampleInputfirstname" name="firstname" placeholder="Name">
+			</div>
+			<div class="form-group">
+				<label for="Email" class="text-white">Email</label>
+				<input type="text" class="form-control" id="exampleInputlastname" name="Email" placeholder="Email">
+			</div>
+			<div class="form-group">
+				<label for="Password" class="text-white">Password</label>
+				<input type="text" class="form-control" id="exampleInputphoneno" name="Password" placeholder="Password">
+			</div>
+			<div class="form-group">
+				<label for="Confirmpassword" class="text-white">Confirm Password</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+					name="Confirmpassword" placeholder="Confirm Password">
+			</div>
+			<div class="form-group">
+				<label for="Picture" class="text-white">Upload Picture</label>
+				<input type="password" class="form-control" id="exampleInputPassword" name="picture"
+					placeholder="Upload Picture">
+				<button class="btn w-50 mt-2 " style="background-color: #e3b04b;">Upload</button>
+				<span class="text-white">Registered user ? <a href="" class="text-underline">Sign in now</a></span>
+			</div>
+			<button type="submit" class="btn w-100" name="create" style="background-color: #e3b04b !important;">Sign
+				up</button>
+		</form>
+	</div>
+</body>
+
+</html>
