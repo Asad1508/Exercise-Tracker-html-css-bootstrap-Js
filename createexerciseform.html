@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+    <style>
+        #createexercise {
+            position: absolute;
+            top: 100px;
+            width: 50%;
+            left: 30%;
+
+        }
+
+        .changecolor {
+            background-color: #e3b04b;
+            padding: 10px;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 border-bottom fixed-top">
+                        <div class="container-fluid">
+                            <a class="navbar-brand fs-2" href="#">Exercise <span class="text-primary">Tracker</span></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 text-center">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Track Exercise</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Account
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+                                            <li><a class="dropdown-item" href="#">Logout</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <section id="createexercise">
+
+                    <h1>Create Exercise</h1>
+                    <form action="bootstrapform.php" method="post">
+                        <div class="form-group">
+                            <label for="firstname"> Name</label>
+                            <input type="text" class="form-control" id="exampleInputfirstname" name="name"
+                                placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control" id="exampleInputlastname" name="description"
+                                placeholder="Description">
+                        </div>
+                        <div class="form-group">
+                            <label for="cars">Choose Exercise:</label>
+
+                            <select name="cars" id="cars" class="changecolor">
+                                <option value="volvo">Push Ups</option>
+                                <option value="saab">Running</option>
+                                <option value="mercedes">Hand sets</option>
+                                <option value="audi">Jym</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Confirmpassword"> Duration</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" name="duration" placeholder="duration">
+                        </div>
+                        <div class="form-group">
+                            <label for="Picture">Date</label>
+                            <input type="password" class="form-control" id="exampleInputPassword" name="picture"
+                                placeholder="Date">
+
+
+                        </div>
+                        <button type="submit" class="btn w-100" name="create"
+                            style="background-color: #e3b04b !important;">
+                            Create Exercise</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+
+</html>
