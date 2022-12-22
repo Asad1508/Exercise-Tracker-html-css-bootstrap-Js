@@ -1,267 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
- 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/all.css">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-        }
-        .accordion-button::after {
-    flex-shrink: 0;
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-left: auto;
-    content: "";
-    transition: transform .2s ease-in-out;
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        }
-        .accordion-button::after {
-  margin-left: 1.1rem;
-}
-
-.iconseditdlt {
-  color: white;
-}
-
-.cercle-icons:hover {
-  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.25);
-  transition: 150ms ease-in;
-}
-
-.fa-edit {
-  background-color: #344eaa;
-  padding: .5rem;
-  border-radius: 50%;
-  box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
-}
-
-.fa-trash {
-  background-color: #bf2611;
-  padding: .5rem;
-  border-radius: 50%;
-  box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
-}
-
-#content_list_container {
-  padding: 2rem;
-}
-.animate{
-  animation-name: anim;
-  animation-duration: 2s;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  transition: 1s;
-}
-@keyframes anim {
-  
-  50%{
-    transform: scale(1.2);
-  }
-  100%{
-   
-    color: white;
-  }
-}
-.card,.card-header{
-    box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
-    border-radius: 100px;
-}
-.card-header{
-    background-color: #ffc107;
-    color: white;
- 
-}
-.card-footer{
-    background-color: #ffc107;
-    color: white;
-}
-.card-header{
-    margin-top: 70px;
-}
-    </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+    }
+  </style>
 </head>
+
 <body>
-   <header>
+  <header>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 border-bottom fixed-top">
-                    <div class="container-fluid">
-                      <a class="navbar-brand fs-2" href="#">Exercise <span class="text-primary">Tracker</span></a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 text-center">
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">Track Exercise</a>
-                          </li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Account
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
-                              <li><a class="dropdown-item" href="index1.html">Logout</a></li>
-                          
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 border-bottom fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand fs-2" href="#">Exercise <span class="text-primary">Tracker</span></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 text-center">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Track Exercise</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Account
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="viewprofile.html">My Profile</a></li>
+                      <li><a class="dropdown-item" href="index1.html">Logout</a></li>
+
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </nav>
         </div>
+      </div>
     </div>
-   </header>
-   <section>
+  </header>
+  <section>
     <div class="container text-center" style="margin-top: 100px;">
-        <div class="row ">
-            <div class="col-md-12 col-sm-12">
-                <a href="createexerciseform.html" class="btn btn-warning animate">Create New Exercise</a>
-               
-            </div>
-            <div class="col-md-3 mt-5 w-25 text-center " >
-              
-                    <div class="card text-center">
-                        <div class="card-header">
-                          Push Ups
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
-                          <h5 class="card-text">Activity Type: Push Ups.</h5>
-                          <p>Date: 12/09/2022</p>
-                        </div>
-                        <div class="card-footer" >
-                          2 days ago
-                          <div class="iconseditdlt mt-4">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                            <i class="fas fa-edit"></i>
-                           </div>
-                        </div>
-                     
-                      </div>
-                      </div>
-            <div class="col-md-3 mt-5 w-25 text-center " >
-              
-                    <div class="card text-center">
-                        <div class="card-header">
-                          Push Ups
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
-                          <h5 class="card-text">Activity Type: Push Ups.</h5>
-                          <p>Date: 12/09/2022</p>
-                        </div>
-                        <div class="card-footer text-muted">
-                          2 days ago
-                          <div class="iconseditdlt mt-4">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                            <i class="fas fa-edit"></i>
-                           </div>
-                        </div>
-                     
-                      </div>
-                      </div>
-            <div class="col-md-3 mt-5 w-25 text-center " >
-              
-                    <div class="card text-center">
-                        <div class="card-header">
-                          Push Ups
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
-                          <h5 class="card-text">Activity Type: Push Ups.</h5>
-                          <p>Date: 12/09/2022</p>
-                        </div>
-                        <div class="card-footer text-muted">
-                          2 days ago
-                          <div class="iconseditdlt mt-4">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                            <i class="fas fa-edit"></i>
-                           </div>
-                        </div>
-                     
-                      </div>
-                      </div>
-            <div class="col-md-3 mt-5 w-25 text-center " >
-              
-                    <div class="card text-center">
-                        <div class="card-header">
-                          Push Ups
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
-                          <h5 class="card-text">Activity Type: Push Ups.</h5>
-                          <p>Date: 12/09/2022</p>
-                        </div>
-                        <div class="card-footer text-muted">
-                          2 days ago
-                          <div class="iconseditdlt mt-4">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                            <i class="fas fa-edit"></i>
-                           </div>
-                        </div>
-                     
-                      </div>
-                      </div>
-            <div class="col-md-3 mt-5 w-25 text-center " >
-              
-                    <div class="card text-center">
-                        <div class="card-header">
-                          Push Ups
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
-                          <h5 class="card-text">Activity Type: Push Ups.</h5>
-                          <p>Date: 12/09/2022</p>
-                        </div>
-                        <div class="card-footer text-muted">
-                          2 days ago
-                          <div class="iconseditdlt mt-4">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                            <i class="fas fa-edit"></i>
-                           </div>
-                        </div>
-                     
-                      </div>
-                      </div>
-            <div class="col-md-3 mt-5 w-25 text-center " >
-              
-                    <div class="card text-center">
-                        <div class="card-header">
-                          Push Ups
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
-                          <h5 class="card-text">Activity Type: Push Ups.</h5>
-                          <p>Date: 12/09/2022</p>
-                        </div>
-                        <div class="card-footer text-muted">
-                          2 days ago
-                          <div class="iconseditdlt mt-4">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                            <i class="fas fa-edit"></i>
-                           </div>
-                        </div>
-                     
-                      </div>
-                      </div>
-                 
-                   
-                  
-                  
-            </div>
+      <div class="row ">
+        <div class="col-md-12 col-sm-12">
+          <a href="createexerciseform.html" class="btn btn-warning animate">Create New Exercise</a>
 
         </div>
+        <div class="row">
+          <div class="col-md-4 mt-5 w-25 text-center offset-1 col-sm-6 ">
+
+            <div class="card text-center">
+              <div class="ribbon-wrapper moveribbon">
+                <div class="glow">&nbsp;</div>
+                <div class="ribbon-fronts">
+                  Push Ups
+                </div>
+                <div class="ribbon-edge-toplefts"></div>
+                <div class="ribbon-edge-toprights"></div>
+                <div class="ribbon-edge-bottomlefts"></div>
+                <div class="ribbon-edge-bottomrights"></div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
+                <h5 class="card-text">Activity Type: Push Ups.</h5>
+                <p>Date: 12/09/2022</p>
+              </div>
+              <div class="card-footer">
+                <div class="ribbon-wrapper">
+                  <div class="glow">&nbsp;</div>
+                  <div class="ribbon-front">
+                    2 days Ago
+                  </div>
+                  <div class="ribbon-edge-topleft"></div>
+                  <div class="ribbon-edge-topright"></div>
+                  <div class="ribbon-edge-bottomleft"></div>
+                  <div class="ribbon-edge-bottomright"></div>
+                </div>
+                <div class="iconseditdlt mt-4">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                  <i class="fas fa-edit"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-4 mt-5 w-25 text-center offset-1 col-sm-6">
+
+            <div class="card text-center">
+              <div class="ribbon-wrapper moveribbon">
+                <div class="glow">&nbsp;</div>
+                <div class="ribbon-fronts">
+                  Push Ups
+                </div>
+                <div class="ribbon-edge-toplefts"></div>
+                <div class="ribbon-edge-toprights"></div>
+                <div class="ribbon-edge-bottomlefts"></div>
+                <div class="ribbon-edge-bottomrights"></div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
+                <h5 class="card-text">Activity Type: Push Ups.</h5>
+                <p>Date: 12/09/2022</p>
+              </div>
+              <div class="card-footer">
+                <div class="ribbon-wrapper">
+                  <div class="glow">&nbsp;</div>
+                  <div class="ribbon-front">
+                    2 days Ago
+                  </div>
+                  <div class="ribbon-edge-topleft"></div>
+                  <div class="ribbon-edge-topright"></div>
+                  <div class="ribbon-edge-bottomleft"></div>
+                  <div class="ribbon-edge-bottomright"></div>
+                </div>
+                <div class="iconseditdlt mt-4">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                  <i class="fas fa-edit"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-4 mt-5 w-25 text-center offset-1 col-sm-6">
+
+            <div class="card text-center">
+              <div class="ribbon-wrapper moveribbon">
+                <div class="glow">&nbsp;</div>
+                <div class="ribbon-fronts">
+                  Push Ups
+                </div>
+                <div class="ribbon-edge-toplefts"></div>
+                <div class="ribbon-edge-toprights"></div>
+                <div class="ribbon-edge-bottomlefts"></div>
+                <div class="ribbon-edge-bottomrights"></div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
+                <h5 class="card-text">Activity Type: Push Ups.</h5>
+                <p>Date: 12/09/2022</p>
+              </div>
+              <div class="card-footer">
+                <div class="ribbon-wrapper">
+                  <div class="glow">&nbsp;</div>
+                  <div class="ribbon-front">
+                    2 days Ago
+                  </div>
+                  <div class="ribbon-edge-topleft"></div>
+                  <div class="ribbon-edge-topright"></div>
+                  <div class="ribbon-edge-bottomleft"></div>
+                  <div class="ribbon-edge-bottomright"></div>
+                </div>
+                <div class="iconseditdlt mt-4">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                  <i class="fas fa-edit"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-4 mt-5 w-25 text-center offset-1 col-sm-6 ">
+
+            <div class="card text-center">
+              <div class="ribbon-wrapper moveribbon">
+                <div class="glow">&nbsp;</div>
+                <div class="ribbon-fronts">
+                  Push Ups
+                </div>
+                <div class="ribbon-edge-toplefts"></div>
+                <div class="ribbon-edge-toprights"></div>
+                <div class="ribbon-edge-bottomlefts"></div>
+                <div class="ribbon-edge-bottomrights"></div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
+                <h5 class="card-text">Activity Type: Push Ups.</h5>
+                <p>Date: 12/09/2022</p>
+              </div>
+              <div class="card-footer">
+                <div class="ribbon-wrapper">
+                  <div class="glow">&nbsp;</div>
+                  <div class="ribbon-front">
+                    2 days Ago
+                  </div>
+                  <div class="ribbon-edge-topleft"></div>
+                  <div class="ribbon-edge-topright"></div>
+                  <div class="ribbon-edge-bottomleft"></div>
+                  <div class="ribbon-edge-bottomright"></div>
+                </div>
+                <div class="iconseditdlt mt-4">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                  <i class="fas fa-edit"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-4 mt-5 w-25 text-center offset-1 col-sm-6 ">
+
+            <div class="card text-center">
+              <div class="ribbon-wrapper moveribbon">
+                <div class="glow">&nbsp;</div>
+                <div class="ribbon-fronts">
+                  Push Ups
+                </div>
+                <div class="ribbon-edge-toplefts"></div>
+                <div class="ribbon-edge-toprights"></div>
+                <div class="ribbon-edge-bottomlefts"></div>
+                <div class="ribbon-edge-bottomrights"></div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
+                <h5 class="card-text">Activity Type: Push Ups.</h5>
+                <p>Date: 12/09/2022</p>
+              </div>
+              <div class="card-footer">
+                <div class="ribbon-wrapper">
+                  <div class="glow">&nbsp;</div>
+                  <div class="ribbon-front">
+                    2 days Ago
+                  </div>
+                  <div class="ribbon-edge-topleft"></div>
+                  <div class="ribbon-edge-topright"></div>
+                  <div class="ribbon-edge-bottomleft"></div>
+                  <div class="ribbon-edge-bottomright"></div>
+                </div>
+                <div class="iconseditdlt mt-4">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                  <i class="fas fa-edit"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-4 mt-5 w-25 text-center offset-1 col-sm-6 ">
+
+            <div class="card text-center">
+              <div class="ribbon-wrapper moveribbon">
+                <div class="glow">&nbsp;</div>
+                <div class="ribbon-fronts">
+                  Push Ups
+                </div>
+                <div class="ribbon-edge-toplefts"></div>
+                <div class="ribbon-edge-toprights"></div>
+                <div class="ribbon-edge-bottomlefts"></div>
+                <div class="ribbon-edge-bottomrights"></div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
+                <h5 class="card-text">Activity Type: Push Ups.</h5>
+                <p>Date: 12/09/2022</p>
+              </div>
+              <div class="card-footer">
+                <div class="ribbon-wrapper">
+                  <div class="glow">&nbsp;</div>
+                  <div class="ribbon-front">
+                    2 days Ago
+                  </div>
+                  <div class="ribbon-edge-topleft"></div>
+                  <div class="ribbon-edge-topright"></div>
+                  <div class="ribbon-edge-bottomleft"></div>
+                  <div class="ribbon-edge-bottomright"></div>
+                </div>
+                <div class="iconseditdlt mt-4">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                  <i class="fas fa-edit"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-4 mt-5 w-25 text-center offset-1 col-sm-6">
+
+            <div class="card text-center">
+              <div class="ribbon-wrapper moveribbon">
+                <div class="glow">&nbsp;</div>
+                <div class="ribbon-fronts">
+                  Push Ups
+                </div>
+                <div class="ribbon-edge-toplefts"></div>
+                <div class="ribbon-edge-toprights"></div>
+                <div class="ribbon-edge-bottomlefts"></div>
+                <div class="ribbon-edge-bottomrights"></div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Description</h5> <span>Lorem ipsum dolor sit amet.</span>
+                <h5 class="card-text">Activity Type: Push Ups.</h5>
+                <p>Date: 12/09/2022</p>
+              </div>
+              <div class="card-footer">
+                <div class="ribbon-wrapper">
+                  <div class="glow">&nbsp;</div>
+                  <div class="ribbon-front">
+                    2 days Ago
+                  </div>
+                  <div class="ribbon-edge-topleft"></div>
+                  <div class="ribbon-edge-topright"></div>
+                  <div class="ribbon-edge-bottomleft"></div>
+                  <div class="ribbon-edge-bottomright"></div>
+                </div>
+                <div class="iconseditdlt mt-4">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                  <i class="fas fa-edit"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
-   </section>
+    </div>
+  </section>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </html>

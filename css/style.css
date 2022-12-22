@@ -241,3 +241,244 @@ body {
   padding: 0 10px 0 10px;
   border-radius: 15px;
 }
+.iconseditdlt {
+  color: white;
+}
+
+.fa-edit {
+  background-color: #344eaa;
+  padding: .5rem;
+  border-radius: 50%;
+  box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+}
+
+.fa-trash {
+  background-color: #bf2611;
+  padding: .5rem;
+  border-radius: 50%;
+  box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+}
+
+.animate {
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: 1s;
+}
+
+@keyframes anim {
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+
+    color: white;
+  }
+}
+
+.card,
+.card-header {
+  box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-header {
+  background-color: #ffc107;
+  color: white;
+
+}
+
+.card-footer {
+  background-color: #ffc107;
+  color: white;
+}
+
+.card-header {
+  margin-top: 70px;
+}
+
+.ribbon-wrapper {
+  position: relative;
+  z-index: 998;
+}
+
+.ribbon-front {
+  background-color: #cc3333;
+  height: 50px;
+  width: 280px;
+  position: relative;
+  left: -30px;
+  z-index: 2;
+  font: 20px/50px bold Verdana, Geneva, sans-serif;
+  color: #f8f8f8;
+  text-align: center;
+  text-shadow: 0px 1px 2px #cc6666;
+}
+
+.ribbon-fronts {
+  background-color: #ffc107;
+  height: 50px;
+  width: 280px;
+  position: relative;
+  left: -25px;
+  z-index: 2;
+  font: 20px/50px bold Verdana, Geneva, sans-serif;
+  color: #f8f8f8;
+  text-align: center;
+  text-shadow: 0px 1px 2px #cc6666;
+}
+
+.ribbon-front,
+.ribbon-back-left,
+.ribbon-back-right {
+  -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -khtml-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -o-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+}
+
+.ribbon-edge-topleft,
+.ribbon-edge-topright,
+.ribbon-edge-bottomleft,
+.ribbon-edge-bottomright {
+  position: absolute;
+  z-index: 1;
+  border-style: solid;
+  height: 0px;
+  width: 0px;
+}
+
+.ribbon-edge-toplefts,
+.ribbon-edge-toprights,
+.ribbon-edge-bottomlefts,
+.ribbon-edge-bottomrights {
+  position: absolute;
+  z-index: 1;
+  border-style: solid;
+  height: 0px;
+  width: 0px;
+}
+
+.ribbon-edge-topleft,
+.ribbon-edge-topright {}
+
+.ribbon-edge-bottomleft,
+.ribbon-edge-bottomright {
+  top: 50px;
+}
+
+.ribbon-edge-topleft,
+.ribbon-edge-bottomleft {
+  left: -25px;
+  border-color: transparent #9B1724 transparent transparent;
+}
+
+.ribbon-edge-toplefts,
+.ribbon-edge-bottomlefts {
+  left: -20px;
+  border-color: transparent #ffc107 transparent transparent;
+}
+
+.ribbon-edge-topleft {
+  top: -5px;
+  border-width: 5px 10px 0 0;
+}
+
+.ribbon-edge-bottomleft {
+  border-width: 0 10px 0px 0;
+}
+
+.ribbon-edge-toplefts {
+  top: -5px;
+  border-width: 5px 10px 0 0;
+}
+
+.ribbon-edge-bottomlefts {
+  border-width: 0 10px 0px 0;
+}
+
+.ribbon-edge-topright,
+.ribbon-edge-bottomright {
+  left: 237px;
+  border-color: transparent transparent transparent #9B1724;
+}
+
+.ribbon-edge-toprights,
+.ribbon-edge-bottomrights {
+  left: 238px;
+  border-color: transparent transparent transparent #ffc107;
+}
+
+.ribbon-edge-topright {
+  top: 0px;
+  border-width: 0px 0 0 10px;
+}
+
+.ribbon-edge-toprights {
+  top: 0px;
+  border-width: 0px 0 0 10px;
+}
+
+.ribbon-edge-bottomright {
+  border-width: 0 0 5px 10px;
+}
+
+.ribbon-edge-bottomrights {
+  border-width: 0 0 5px 10px;
+}
+
+.moveribbon {
+  position: relative;
+  top: 10px;
+  left: 15px;
+}
+
+@-webkit-keyframes flow {
+  0% {
+    left: -20px;
+    opacity: 0;
+  }
+
+  50% {
+    left: 100px;
+    opacity: 0.3;
+  }
+
+  100% {
+    left: 180px;
+    opacity: 0;
+  }
+}
+
+@keyframes flow {
+  0% {
+    left: -20px;
+    opacity: 0;
+  }
+
+  50% {
+    left: 100px;
+    opacity: 0.3;
+  }
+
+  100% {
+    left: 180px;
+    opacity: 0;
+  }
+}
+
+.glow {
+  background: rgb(255, 255, 255);
+  width: 40px;
+  height: 100%;
+  z-index: 999;
+  position: absolute;
+  -webkit-animation: flow 1.5s linear infinite;
+}
+
+;
